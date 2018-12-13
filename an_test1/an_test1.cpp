@@ -5,11 +5,14 @@
 #include <memory>
 #include <string>
 #include <iostream>
+#include <sstream>
 #include <functional>
 #include "an_aop1.h"
 #include "an_any.h"
 #include "an_function_traits.h"
 #include "an_messagebus.h"
+#include <ppl.h>
+#include <thread>
 
 using namespace std;
 
@@ -108,18 +111,24 @@ int main()
 	std::function<int(int)> ff1 = [](int i) {return i; };
 	if (std::is_same<decltype(ff), decltype(ff1)>::value) std::cout << "same" << std::endl;
 
-
 	//messagebus test
 	subject sub;
 	car c1;
 	bus c2;
 
-
 	sub.send(g_topic);
 	std::cout << "----------------------" << std::endl;
 	sub.send("");
 
+	/*
+	using namespace Concurrency;
+	parallel_for(1, 6, [](int value) {
+		std::stringstream ss;
+		ss << value << '- ' << std::this_thread::get_id() << ', '<<std::endl;
+		std::cout << ss.str();
+	});
+	*/
+	
 	system("pause");
     return 0;
 }
-
