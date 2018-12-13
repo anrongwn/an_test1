@@ -61,7 +61,7 @@ static std::string g_topic{ "drive" };
 
 struct subject {
 	void send(const std::string& topic) {
-		g_bus.SendMsg<void, int>(50, topic);
+		g_bus.SendMsg<void, int>(120, topic);
 	}
 };
 struct car {
