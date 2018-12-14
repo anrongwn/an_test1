@@ -64,7 +64,7 @@ namespace an {
 		};
 
 		template<typename T>
-		struct Derived :Base {
+		struct Derived : Base {
 			T m_value;
 
 			template<typename U>

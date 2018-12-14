@@ -39,6 +39,15 @@
     <ClInclude Include="an_messagebus.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="an_task.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="an_when.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="an_parallel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
